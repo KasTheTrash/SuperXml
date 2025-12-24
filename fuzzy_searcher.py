@@ -5,8 +5,6 @@ import os
 from pathlib import Path
 import re
 
-
-
 class SearchItem(QListWidgetItem):
     def __init__(self, name, full_path, lineno, end, line):
         self.name = name
@@ -16,7 +14,6 @@ class SearchItem(QListWidgetItem):
         self.line = line
         self.formatted = f'{self.name}:{self.lineno}:{self.end} - {self.line} ...'
         super().__init__(self.formatted)
-
 
     def __str__(self):
         return self.formatted

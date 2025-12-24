@@ -26,11 +26,11 @@ class MainWindow(QMainWindow):
         self.current_side_bar = None
 
     def init_ui(self):
-        self.app_name = "PYQT EDITOR"
+        self.app_name = "Super XML editor"
         self.setWindowTitle(self.app_name)
         self.resize(1300, 900)
 
-        self.setStyleSheet(open("./src/css/style.qss", "r").read())
+        self.setStyleSheet(open("./style.css", "r").read())
 
         # alternative Consolas font
         self.window_font = QFont("Fire Code") # font needs to be installed in your computer if its not use something else

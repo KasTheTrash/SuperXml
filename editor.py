@@ -9,7 +9,7 @@ import keyword
 import pkgutil
 from pathlib import Path
 from lexer import PyCustomLexer
-from autcompleter import AutoCompleter
+from autocomplete import AutoCompleter
 from typing import TYPE_CHECKING
 
 if TYPE_CHECKING:
