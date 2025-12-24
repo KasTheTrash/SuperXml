@@ -1,6 +1,6 @@
 [project]
-name = "editor-yt"
-version = "0.1.0"
+name = "SuperXML"
+version = "1.0.0"
 description = ""
 main_script = "./main.py"
 
