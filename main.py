@@ -103,7 +103,17 @@ class MainWindow(QMainWindow):
         redo_action.setShortcut("Ctrl+Y")
         redo_action.triggered.connect(self.redo)
 
+        ##############################
+        ##### TO DO ######
         # View menu
+    #    view_menu = menu_bar.addMenu("View")
+        # Toggle File Manager
+    #   toggle_file_manager = view_menu.addAction("Toggle File Manager")
+    #    toggle_file_manager.setShortcut("Ctrl+E")
+    #    toggle_file_manager.triggered.connect(
+    #        lambda: self.show_hide_tab(None, "folder-icon")
+    #    )   
+        ############################# 
         # you can add more
 
     def get_editor(self, path: Path = None, is_python_file=True) -> QsciScintilla:
@@ -442,6 +452,9 @@ class MainWindow(QMainWindow):
             self.model.setRootPath(new_folder)
             self.tree_view.setRootIndex(self.model.index(new_folder))
             self.statusBar().showMessage(f"Opened {new_folder}", 2000)
+            
+            
+######### Edit Menu Actions ##########
 
     def copy(self):
         editor = self.tab_view.currentWidget()
@@ -465,7 +478,7 @@ class MainWindow(QMainWindow):
         editor = self.tab_view.currentWidget()
         if editor is not None:
             editor.redo()
-    
+
 
 if __name__ == '__main__':
     app = QApplication([])
