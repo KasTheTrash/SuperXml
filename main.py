@@ -86,6 +86,24 @@ class MainWindow(QMainWindow):
         copy_action = edit_menu.addAction("Copy")
         copy_action.setShortcut("Ctrl+C")
         copy_action.triggered.connect(self.copy)
+        
+        cut_action = edit_menu.addAction("Cut")
+        cut_action.setShortcut("Ctrl+X")
+        cut_action.triggered.connect(self.cut)
+
+        paste_action = edit_menu.addAction("Paste") 
+        paste_action.setShortcut("Ctrl+V")
+        paste_action.triggered.connect(self.paste)
+
+        undo_action = edit_menu.addAction("Undo")
+        undo_action.setShortcut("Ctrl+Z")
+        undo_action.triggered.connect(self.undo)
+
+        redo_action = edit_menu.addAction("Redo")
+        redo_action.setShortcut("Ctrl+Y")
+        redo_action.triggered.connect(self.redo)
+
+        # View menu
         # you can add more
 
     def get_editor(self, path: Path = None, is_python_file=True) -> QsciScintilla:
@@ -301,9 +319,6 @@ class MainWindow(QMainWindow):
         search_layout.addWidget(self.search_list_view)
         self.search_frame.setLayout(search_layout)
 
-
-      
-
         ##############################
         ###### SETUP WIDGETS ##########
 
@@ -433,25 +448,26 @@ class MainWindow(QMainWindow):
         if editor is not None:
             editor.copy()
 
+    def cut(self):
+        editor = self.tab_view.currentWidget()
+        if editor is not None:
+            editor.cut()
 
-
+    def paste(self):
+        editor = self.tab_view.currentWidget()
+        if editor is not None:
+            editor.paste()
+    def undo(self):
+        editor = self.tab_view.currentWidget()
+        if editor is not None:
+            editor.undo()
+    def redo(self):
+        editor = self.tab_view.currentWidget()
+        if editor is not None:
+            editor.redo()
+    
 
 if __name__ == '__main__':
     app = QApplication([])
     window = MainWindow()
     sys.exit(app.exec())
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
