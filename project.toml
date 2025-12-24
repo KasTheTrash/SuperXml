@@ -2,7 +2,7 @@
 name = "editor-yt"
 version = "0.1.0"
 description = ""
-main_script = "./src/main.py"
+main_script = "./main.py"
 
 [packages]
 PyQt5 = "5.15.7"
