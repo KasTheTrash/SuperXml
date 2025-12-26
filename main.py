@@ -452,6 +452,8 @@ class MainWindow(QMainWindow):
             self.model.setRootPath(new_folder)
             self.tree_view.setRootIndex(self.model.index(new_folder))
             self.statusBar().showMessage(f"Opened {new_folder}", 2000)
+        else:
+            self.statusBar().showMessage("Cancelled", 2000)
             
             
 ######### Edit Menu Actions ##########
