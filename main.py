@@ -2,7 +2,7 @@ import sys
 import xml.etree.ElementTree as ET
 import xml.dom.minidom
 from PyQt6.QtWidgets import (QApplication, QMainWindow, QTextEdit, QVBoxLayout, 
-                             QWidget, QFileDialog, QCompleter, QStatusBar, QMessageBox)
+                            QWidget, QFileDialog, QCompleter, QStatusBar, QMessageBox)
 from PyQt6.QtGui import QAction, QTextCursor, QStandardItemModel, QStandardItem, QKeySequence
 from PyQt6.QtCore import Qt
 
