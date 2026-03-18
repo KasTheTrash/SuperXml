@@ -10,7 +10,7 @@ class XMLEditor(QMainWindow):
     def __init__(self):
         super().__init__()
 
-        self.setWindowTitle("Delphi-Compatible XML Editor")
+        self.setWindowTitle("Delphi XML Editor")
         self.setGeometry(100, 100, 900, 700)
         
         self.current_file_path = None
